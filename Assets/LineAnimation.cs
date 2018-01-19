@@ -12,6 +12,7 @@ public class LineAnimation : MonoBehaviour {
 	public Transform kokohe;
 	public float lineDrawSpeed;
 
+	private int s;
 
 	void Start () {
 		lineRenderer = GetComponent<LineRenderer> ();
@@ -22,19 +23,23 @@ public class LineAnimation : MonoBehaviour {
 	}
 
 	void Update () {
-		if (count < howLong) 
-		{
-			count += .1f / lineDrawSpeed;
 
-			float x = Mathf.Lerp(0,howLong,count);
+		//s = t.GetComponent<Start1> ();
 
-			Vector3 pointA = saisyo.position;
-			Vector3 pointB = kokohe.position;
+		if (s == 1) {
+			if (count < howLong) {
+				count += .1f / lineDrawSpeed;
 
-			Vector3 pointAlongLine = x * Vector3.Normalize(pointB - pointA) + pointA;
+				float x = Mathf.Lerp (0, howLong, count);
+
+				Vector3 pointA = saisyo.position;
+				Vector3 pointB = kokohe.position;
+
+				Vector3 pointAlongLine = x * Vector3.Normalize (pointB - pointA) + pointA;
 
 
-			lineRenderer.SetPosition(1,pointAlongLine);
+				lineRenderer.SetPosition (1, pointAlongLine);
+			}
 		}
 	}
 }
