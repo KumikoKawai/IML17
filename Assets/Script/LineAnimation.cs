@@ -12,7 +12,7 @@ public class LineAnimation : MonoBehaviour {
 	public Transform kokohe;
 	public float lineDrawSpeed;
 
-	private int s;
+	private int s = 0;
 
 	void Start () {
 		lineRenderer = GetComponent<LineRenderer> ();
@@ -24,8 +24,9 @@ public class LineAnimation : MonoBehaviour {
 
 	void Update () {
 
-		//s = t.GetComponent<Start1> ();
-
+		if (Input.GetTouch (0).phase == TouchPhase.Began) {
+			s = 1;
+		}
 		if (s == 1) {
 			if (count < howLong) {
 				count += .1f / lineDrawSpeed;
@@ -42,4 +43,5 @@ public class LineAnimation : MonoBehaviour {
 			}
 		}
 	}
+
 }

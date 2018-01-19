@@ -251,6 +251,11 @@ Prefab:
       propertyPath: kokohe
       value: 
       objectReference: {fileID: 341178803}
+    - target: {fileID: 114257694101968176, guid: d732636241d2c412fb6a3fd5ffc4d6c3,
+        type: 2}
+      propertyPath: lineDrawSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d732636241d2c412fb6a3fd5ffc4d6c3, type: 2}
   m_IsPrefabParent: 0
@@ -339,6 +344,11 @@ Prefab:
     - target: {fileID: 4921587072699678, guid: 724acc2053b134d1e8518c418cabd182, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114567480268513990, guid: 724acc2053b134d1e8518c418cabd182,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 724acc2053b134d1e8518c418cabd182, type: 2}
