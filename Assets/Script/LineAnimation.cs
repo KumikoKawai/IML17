@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class LineAnimation : MonoBehaviour {
 
 	private LineRenderer lineRenderer;
@@ -12,19 +13,22 @@ public class LineAnimation : MonoBehaviour {
 	public Transform kokohe;
 	public float lineDrawSpeed;
 
-	private int s = 0;
+	private int s;
+
 
 	void Start () {
 		lineRenderer = GetComponent<LineRenderer> ();
 		lineRenderer.SetPosition (0, saisyo.position);
-		lineRenderer.SetWidth (.1f, .1f);
+		//lineRenderer.SetWidth (.1f, .1f);
+		lineRenderer.startWidth = .1f;
+		lineRenderer.endWidth = .1f;
 
 		howLong = Vector3.Distance (saisyo.position,kokohe.position);
 	}
 
-	void Update () {
-
-		if (Input.GetTouch (0).phase == TouchPhase.Began) {
+	void Update ()
+	{
+		if ((Input.touchCount > 0) && (Input.GetTouch (0).phase == TouchPhase.Began)) {
 			s = 1;
 		}
 		if (s == 1) {
@@ -39,9 +43,14 @@ public class LineAnimation : MonoBehaviour {
 				Vector3 pointAlongLine = x * Vector3.Normalize (pointB - pointA) + pointA;
 
 
-				lineRenderer.SetPosition (1, pointAlongLine);
+				lineRenderer.SetPosition (1, pointAlongLine);		
 			}
-		}
 	}
+}
+
+
+
+
+	
 
 }
