@@ -36,7 +36,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4650855272218472}
-  - component: {fileID: 114964653031326664}
   m_Layer: 0
   m_Name: LineRenderer
   m_TagString: Untagged
@@ -55,7 +54,7 @@ GameObject:
   - component: {fileID: 120674200952784668}
   - component: {fileID: 114947629424221082}
   m_Layer: 0
-  m_Name: LineRenderer Object3
+  m_Name: LineRenderer Object2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +71,7 @@ GameObject:
   - component: {fileID: 120651915048970482}
   - component: {fileID: 114144447150734694}
   m_Layer: 0
-  m_Name: LineRenderer Object2
+  m_Name: LineRenderer Object1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -175,20 +174,6 @@ MonoBehaviour:
   saisyo: {fileID: 0}
   kokohe: {fileID: 0}
   lineDrawSpeed: 5
---- !u!114 &114964653031326664
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1584008033149756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ab511b42fb674195a824bd1ca5bbdaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saisyo: {fileID: 0}
-  kokohe: {fileID: 0}
-  lineDrawSpeed: 0
 --- !u!120 &120651915048970482
 LineRenderer:
   m_ObjectHideFlags: 1
