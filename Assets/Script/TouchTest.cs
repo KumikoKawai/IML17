@@ -35,12 +35,15 @@ public class TouchTest : MonoBehaviour {
                         //Rayを飛ばしてあたったオブジェクトが自分自身だったら
                         if (hit.collider.gameObject == this.gameObject){
                             touch = 1;
+														Debug.Log(touch);
 														return true;
+
                         }
                     }
                 }
             }
         }
         return false; //タッチされてなかったらfalse
+
     }
 }

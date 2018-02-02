@@ -8,6 +8,7 @@ public class makeLine2 : MonoBehaviour {
   GameObject Kokohe;
   GameObject LineRenderer_prefab;
 
+
  void Start () {
 
   // LineRenderer（親オブジェクト）を生成をせず、

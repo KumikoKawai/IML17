@@ -22,13 +22,10 @@ public class LineAnimation : MonoBehaviour {
 		lineRenderer.startWidth = .1f;
 		lineRenderer.endWidth = .1f;
 
-
 		howLong = Vector3.Distance (saisyo.position,kokohe.position);
 	}
 
 	void Update () {
-
-		if (TouchTest.touch == 1) {
 
 			if (count < howLong) {
 				count += .1f / lineDrawSpeed;
@@ -44,6 +41,6 @@ public class LineAnimation : MonoBehaviour {
 				lineRenderer.SetPosition (1, pointAlongLine);
 			}
 		}
-	}
+
 
 }

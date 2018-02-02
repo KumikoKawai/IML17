@@ -10,8 +10,7 @@ public class makeLine1 : MonoBehaviour {
 
  void Start () {
 
-  // LineRenderer（親オブジェクト）を生成をせず、
-	// makeLineスクリプトで生成したLineRenderer_prefabを利用したい
+  // LineRendererを生成する
   GameObject prefab = (GameObject)Resources.Load("LineRenderer");
   Instantiate(prefab);
   LineRenderer_prefab = GameObject.Find("LineRenderer(Clone)/LineRenderer Object1");
